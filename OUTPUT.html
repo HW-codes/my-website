@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firstname Lastname</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .name {
+            font-weight: bold;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .index {
+            font-size: 18px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            right: 0;
+        }
+
+        .dropdown.active .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="name">Audrey Schmidt</div>
+            <div class="dropdown" onclick="toggleDropdown(this)">
+                <div class="index">Index &#9660;</div>
+                <div class="dropdown-content" id="dropdownContent">
+                    <a href="OUTPUT.html">OUTPUT</a>
+                    <a href="INPUT.html">INPUT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown(dropdown) {
+            dropdown.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audrey Schmidt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th {
+            display: none;
+        }
+
+        td {
+            padding: 20px; /* Increased padding for better spacing */
+            border-bottom: 1px solid #ccc;
+            text-align: left;
+            word-break: break-word; /* Allow words to break */
+        }
+
+        td:first-child {
+            font-weight: bold;
+            width: 120px; /* Fixed width for Date Published */
+        }
+
+        td:nth-child(2) {
+            font-style: italic;
+            width: auto; /* Responsive width for Exhibition Title */
+        }
+
+        td:nth-child(3) {
+            width: auto; /* Responsive width for Artists */
+            white-space: pre-line; /* Allow line breaks */
+        }
+
+        td:nth-child(4),
+        td:nth-child(5) {
+            width: 150px; /* Fixed width for Gallery and Type */
+            white-space: nowrap; /* Prevent line breaks */
+            overflow: hidden; /* Hide overflow text */
+            text-overflow: ellipsis; /* Display ellipsis for overflow text */
+        }
+
+        @media screen and (max-width: 768px) {
+            td {
+                display: block;
+                width: 100%;
+                padding: 15px; /* Adjusted padding for smaller screens */
+            }
+
+            td:first-child {
+                font-weight: bold;
+            }
+
+            td:nth-child(2) {
+                font-style: italic;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>OUTPUT</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date Published</th>
+                    <th>Exhibition Title</th>
+                    <th>Artists</th>
+                    <th>Gallery</th>
+                    <th>Type</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+ <tr>
+                    <td><strong>24.11.23</strong></td>
+                    <td><em><a href="https://www.memoreview.net/magazine/issues/issue-1/tall-poppies">Tall Poppies</a></em></td>
+                    <td>Destiny Deacon, Zac Segbedzi, Hamishi Farah, Minna Gilligan, Gemma Topliss, Paul Taylor, Kierkegaard</td>
+                    <td>VA</td>
+                    <td>Memo Magazine</td>
+                    <td></td>
+                </tr>
+ <tr>
+                    <td><strong>01.09.23</strong></td>
+                    <td><em>Making The Invisible Visible</em></td>
+                    <td>Gabriella D’Costa</td>
+                    <td>Fiona and Sidney Myer Gallery</td>
+                    <td>Exhibition Text</td>
+                    <td></td>
+                </tr>
+ <tr>
+                    <td><strong>18.08.23</strong></td>
+                    <td><em><a href="https://min2.report/audrey-schmidt/amy-ireland-maya-b-kronic">Calling In</a></em></td>
+                    <td>Amy Ireland, Maya B. Kronic, Urbanomic</td>
+                    <td>min2.report</td>
+                    <td>Film</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>08.04.23</strong></td>
+                    <td><em><a href="https://www.memoreview.net/reviews/make-a-wish-by-audrey-schmidt">Make A Wish!</a></em></td>
+                    <td>Joshua Petherick, Lewis Fidock</td>
+                    <td>Asbestos</td>
+                    <td>Memo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>11.03.23</strong></td>
+                    <td>Synesthesia</td>
+                    <td>DJ Dedications</td>
+                    <td>4zzz</td>
+                    <td>Mix</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>10.03.23</strong></td>
+                    <td><em><a href="https://min2.report/audrey-schmidt-arthur-schmidt/wounded-car-park">WOUNDED CAR PARK!</a></em></td>
+                    <td>Michael Lynch, Arthur Schmidt, Christine Schmidt</td>
+                    <td>Brisbane</td>
+                    <td>Exhibition</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>04.11.22</strong></td>
+                    <td><em><a href="https://soundcloud.com/skylab_radio/top-o-the-morning-w-mousse-dj-dedications">Top O’ The Morning</a></em></td>
+                    <td>DJ Dedications</td>
+                    <td>Skylab Radio</td>
+                    <td>Mix</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>30.07.22</strong></td>
+                    <td><em>Sélection de Paresthésie Prestige</em></td>
+                    <td>Ander Rennick</td>
+                    <td>Mejia</td>
+                    <td>Memo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>18.06.22</strong></td>
+                    <td><em>More Love</em></td>
+                    <td>Nik Lee, Mike Kelley, Eric Schmid, Spencer Lai, Alexis Kanatsios, Adam Martin, Jordan Wolfson, Jasper Jordan-Lang, Lei Lei Kung, Xavier Vasco, Anabel Robinson, Morag Keil</td>
+                    <td>Asbestos</td>
+                    <td>Memo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>28.05.22</strong></td>
+                    <td><em>Huddling, friends with thermal benefits</em></td>
+                    <td>Holly Childs, Gediminas Žygus, Ej Son, Daniel Jenatsch, Spencer Lai</td>
+                    <td>Cool Change Contemporary</td>
+                    <td>Exhibition Text</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>24.04.22</strong></td>
+                    <td><em><a href="https://min2.report/audrey-schmidt/the-boom-and-bust-of-sleaze">The Boom and Bust of Sleaze</a></em></td>
+                    <td>Abella D’Adamo, Anna Brownfield, The Girl Next Door</td>
+                    <td>Centre D’Editions, The Tote</td>
+                    <td>min2.report</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>16.10.21</strong></td>
+                    <td><em><a href="https://www.memoreview.net/reviews/memodrome-oblivions-ratio-by-audrey-schmidt">MeMOdrome: O'Blivion's Ratio</a></em></td>
+                    <td>David Homewood (John Mccrackpipe), Alex Vivian (Cream Pot Charlie), Liam Osborne, David Cronenberg</td>
+                    <td>Guzzler, Meow2, rrealartt</td>
+                    <td>Memo</td>
+                    <td></td>
+                <tr>
+                    <td><strong>01.09.21</strong></td>
+                    <td><em>Closer to Nature</em></td>
+                    <td>Grace Culley</td>
+                    <td>Sutton Projects</td>
+                    <td>Artforum</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>01.08.21</strong></td>
+                    <td><em>Happy Endings: Disney Accelerationism</em></td>
+                    <td></td>
+                    <td></td>
+                    <td>SPLM</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>17.07.21</strong></td>
+                    <td><em>Disney: The Magic of Animation</em></td>
+                    <td>Disney</td>
+                    <td>ACMI</td>
+                    <td>Memo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>20.05.21</strong></td>
+                    <td><em>The garden</em></td>
+                    <td>Overlapping Magisteria: The 2020 Macfarlane Commissions</td>
+                    <td>ACCA</td>
+                    <td>Exhibition Text</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>17.04.21</strong></td>
+                    <td><em>Jab</em></td>
+                    <td>rrealart</td>
+                    <td>N/A</td>
+                    <td>Memo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>06.03.21</strong></td>
+                    <td><em>Dart Object, drowning curse</em></td>
+                    <td>Claire Lambe, Jemi Gale</td>
+                    <td>TCB</td>
+                    <td>Memo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>01.02.21</strong></td>
+                    <td><em>Myths & Facts</em></td>
+                    <td>Rafaela Pandolfini</td>
+                    <td>Westspace Offsite</td>
+                    <td>Exhibition Text</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>20.01.21</strong></td>
+                    <td><em><a href="https://min2.report/audrey-schmidt-cameron-hurst/xoxo-grotty-gossip-girls-abject-australian-art">xoxo Grotty Gossip Girls: Abject Australian Art</a></em></td>>
+                    <td>Hana Earles, Grace Anderson, Evie Poggioli, Katherine Botten, Abella D’Adamo, Ian McLean, Christopher LG Hill, Liam Osborne, Josey Kidd-Crowe, Edward Dean, Lewis Fidock, Joshua Petherick, Grace Culley, Savana Szelski, Calum Lockey, Natasha Havir-Smith, Zac Segbedzi, Bunny Rogers, Alex Vivian</td>
+                    <td>VA</td>
+                    <td>min2.report</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>12.12.20</strong></td>
+                    <td><em><a href="https://www.memoreview.net/reviews/rex-veal-summer-20-21-at-bossys-gallery-by-audrey-schmidt">Summer 20/21</a></em></td>
+                    <td>Rex Veal</td>
+                    <td>Bossy’s Gallery</td>
+                    <td>Memo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>31.10.20</strong></td>
+                    <td><em>The ND: Love After Life</em></td>
+                    <td>The Weeknd</td>
+                    <td></td>
+                    <td>min2.report</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>11.07.20</strong></td>
+                    <td><em><a href="https://www.memoreview.net/reviews/lost-in-the-feed-translation-by-audrey-schmidt">Lost in the Feed/Translation</a></em></td>
+                    <td>Nicholas Mangan, Peter Robinson, David Rosetzky, Anne Ferran, Gian Manik, Kate Beynon, Angela Goh</td>
+                    <td>VA</td>
+                    <td>Memo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>29.02.20</strong></td>
+                    <td><em><a href="https://www.memoreview.net/reviews/in-costume-at-mejia-by-audrey-schmidt">Art show</a></em></td>
+                    <td>Alethea Everard</td>
+                    <td>Meow2</td>
+                    <td>Memo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>07.02.20</strong></td>
+                    <td><em><a href="https://min2.report/audrey-schmidt/theres-no-art-in-heaven">there’s no art in heaven</a></em></td>
+                    <td>Gabriella D’Costa, Vava Dudu, Hana Earles, Carmen-Sibha Keiso, Spencer Lai, Nunzio Madden, Liam Osborne, Evelyn Poggioli, Ander Rennick, Victoria Todorov, Michelle Uckotter, K8 Hardy, Tyson Campbell, Nunzio Madden, Augusta Vinall Richardson, Hana Earles, Kalyani Mumtaz, Kat Capel, Jasmine Pickup, Alethea Everard, Evelyn Poggioli, Rex Veal, Brendan Morris, Gabriella D’Costa, HB Peace, Amy Parker, James Vinciguerra, Edward Dean</td>
+                    <td>Mejia</td>
+                    <td>Exhibition</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>09:12:19</strong></td>
+                    <td><em><a href="https://www.mixcloud.com/hopestradio/091219-dj-dedications-with-audrey-schmidt/">John Giorno</a></em></td>
+                    <td>DJ Dedications</td>
+                    <td>Hope Street Radio</td>
+                    <td>Mix</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>16.11.19</strong></td>
+                    <td><em>In Costume</em></td>
+                    <td>Brendan Morris</td>
+                    <td>Mejia</td>
+                    <td>Memo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>06.08.19</strong></td>
+                    <td><em>SOmething Drawings</em></td>
+                    <td>Lorilee Yang, Ander Rennick, Brighid Fitzgerald, George Egerton-Warburton, Victoria Todorov, Douglas Maxted, Zoe Jackson, Nik Lee</td>
+                    <td>Read the Room</td>
+                    <td>Exhibition Text</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>08.07.19</strong></td>
+                    <td><em><a href="https://www.memoreview.net/reviews/octopus-19-ventriloquy-at-gerturde-contemporary-by-audrey-schmidt">Octopus 19: Ventriloquy</a></em></td>
+                    <td>Mel Deerson, Briony Galligan, Gabriella D'Costa, Simon Zoric, Ceri Hann, Eric Demetriou, Hillary Goldsmith, Megan Pain, Jacqui Shelton, Melody Paloma, Hannah Weiner, Danielle Freakley</td>
+                    <td>Gertrude Contemporary</td>
+                    <td>Memo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>30:06:19</strong></td>
+                    <td><em><a href="https://www.mixcloud.com/hopestradio/300619-dj-dedications-with-audrey-schmidt/">Phebe Schmidt</a></em></td>
+                    <td>DJ Dedications</td>
+                    <td>Hope Street Radio</td>
+                    <td>Mix</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>01:03:19</strong></td>
+                    <td><em><a href="https://soundcloud.com/sanpodisco/dj-dedications-sanpo-113">Heart</a></em></td>
+                    <td>DJ Dedications</td>
+                    <td>Sanpo Disco</td>
+                    <td>Mix</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>16.02.19</strong></td>
+                    <td><em><a href="https://www.memoreview.net/reviews/carny-at-neon-parc-by-audrey-schmidt">Carny</a></em></td>
+                    <td>Gavin Bell, Jarrah de Kuijer, Simon McGlinn, Matilda Davis, Dale Frank, Pat Larter, Rob McLeish, Viv Miller, Rose Nolan, Susan Norrie, Robert Rooney, Kieren Seymour Paul Yore</td>
+                    <td>Neon Parc</td>
+                    <td>Memo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>08.12.18</strong></td>
+                    <td><em>Aesthetics, Politics and Histories: The Social Context of Art</em></td>
+                    <td>VA</td>
+                    <td>AAANZ</td>
+                    <td>Memo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>31.10.18</strong></td>
+                    <td><em>Fucky, With Compliments</em></td>
+                    <td>Spencer Lai</td>
+                    <td>Bus Projects</td>
+                    <td>Exhibition Text</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>01.04.18</strong></td>
+                    <td><em>Mutlu Çerkez: Fake or fortune?</em></td>
+                    <td>Mutlu Çerkez</td>
+                    <td>MUMA</td>
+                    <td>Art Monthly</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>22.02.18</strong></td>
+                    <td><em><a href="https://min2.report/audrey-schmidt/gordon-hookey">Calling In</a></em></td>
+                    <td>Gordon Hookey</td>
+                    <td>min2.report</td>
+                    <td>Film</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>20.02.18</strong></td>
+                    <td><em>Athens is the New Berlin: documenta’s counterfeit bohemia</em></td>
+                    <td></td>
+                    <td>documenta</td>
+                    <td>min2.report</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>01.10.17</strong></td>
+                    <td><em>Solidarity: live your Greece in myth</em></td>
+                    <td>Gordon Hookey</td>
+                    <td>documenta</td>
+                    <td>Art Monthly</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>09.09.17</strong></td>
+                    <td><em>People Soup</em></td>
+                    <td>Calum Lockey, Zac Segbedzi, Hana Earles, Bonny Poon, Katharina Otto-Bernstein, Paul Winkler, Quintessa Matranga, Rafael Delacruz, Marc Matchak</td>
+                    <td>Suicidal Oil Piglet</td>
+                    <td>Memo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>01.07.17</strong></td>
+                    <td><em>Contaminant, Figures</em></td>
+                    <td>Spencer Lai</td>
+                    <td>Fort Delta</td>
+                    <td>Exhibition Text</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>01.02.17</strong></td>
+                    <td><em>A 20/20 Retrospective</em></td>
+                    <td>Hana Earles, Twacy Emim</td>
+                    <td>Punk Café</td>
+                    <td>un Magazine</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>01.09.16</strong></td>
+                    <td><em>Banquet at the Biennial</em></td>
+                    <td>Jessie Kiely, Monica’s Gallery, Jake Swinson, Spencer Lai, Centre for Style</td>
+                    <td>TarraWarra Museum</td>
+                    <td>Art + Australia</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>17.08.16</strong></td>
+                    <td>Tell Me What You Have And I Will Know What You Are</td>
+                    <td>Anastasia Klose, Body by Body, Callan Bradley Hales, Cristine Brache, Eleanor Ivory Weber, Hana Earles, James Ferraro, Karen Finley, Katherine Botten, Katie West, Monica’s Gallery, Nunzio Madden, Phebe Schmidt, Quintessa Matranga, Rare Candy, Ruth O’Leary, Tanja Ostojić</td>
+                    <td>Airbnb Melbourne and New York</td>
+                    <td>Exhibition</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>24.11.15</strong></td>
+                    <td><em>Personality shares</em></td>
+                    <td>Ryan Trecartin, Hito Steyerl</td>
+                    <td>AAANZ</td>
+                    <td>Conference Paper</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>06.11.15</strong></td>
+                    <td><em>CRITIQUE: 7 Writers for 15 Artworks</em></td>
+                    <td>Hamishi Farah</td>
+                    <td>Gertrude Contemporary</td>
+                    <td>Exhibition Text</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>2015</strong></td>
+                    <td><em><a href="https://vimeo.com/132238964">Personal Space</a></em></td>
+                    <td>Zac Segbedzi</td>
+                    <td>Novembre Magazine</td>
+                    <td>Film</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>2015</strong></td>
+                    <td><em><a href="https://vimeo.com/132979145">Personal Space</a></em></td>
+                    <td>Rowan Oliver</td>
+                    <td>Novembre Magazine</td>
+                    <td>Film</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>01.11.13</strong></td>
+                    <td><em>Everything is fucked</em></td>
+                    <td>Paul Yore</td>
+                    <td>Linden Contemporary</td>
+                    <td>Dissect Journal</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+

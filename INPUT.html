@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firstname Lastname</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .name {
+            font-weight: bold;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .index {
+            font-size: 18px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            right: 0;
+        }
+
+        .dropdown.active .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="name">Audrey Schmidt</div>
+            <div class="dropdown" onclick="toggleDropdown(this)">
+                <div class="index">Index &#9660;</div>
+                <div class="dropdown-content" id="dropdownContent">
+                    <a href="OUTPUT.html">OUTPUT</a>
+                    <a href="INPUT.html">INPUT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown(dropdown) {
+            dropdown.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audrey Schmidt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th {
+            display: none;
+        }
+
+        td {
+            padding: 20px; /* Increased padding for better spacing */
+            border-bottom: 1px solid #ccc;
+            text-align: left;
+            word-break: break-word; /* Allow words to break */
+        }
+
+        td:first-child {
+            font-weight: bold;
+            width: 120px; /* Fixed width for Date Published */
+        }
+
+        td:nth-child(2) {
+            font-style: italic;
+            width: auto; /* Responsive width for Exhibition Title */
+        }
+
+        td:nth-child(3) {
+            width: auto; /* Responsive width for Artists */
+            white-space: pre-line; /* Allow line breaks */
+        }
+
+        td:nth-child(4),
+        td:nth-child(5) {
+            width: 150px; /* Fixed width for Gallery and Type */
+            white-space: nowrap; /* Prevent line breaks */
+            overflow: hidden; /* Hide overflow text */
+            text-overflow: ellipsis; /* Display ellipsis for overflow text */
+        }
+
+        @media screen and (max-width: 768px) {
+            td {
+                display: block;
+                width: 100%;
+                padding: 15px; /* Adjusted padding for smaller screens */
+            }
+
+            td:first-child {
+                font-weight: bold;
+            }
+
+            td:nth-child(2) {
+                font-style: italic;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>INPUT</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date Published</th>
+                    <th>Exhibition Title</th>
+                    <th>Artists</th>
+                    <th>Gallery</th>
+                    <th>Type</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+ <tr>
+                    <td><strong>2023</strong></td>
+                    <td>Ian Potter Cultural Trust</td>
+                    <td>Editorial and writing mentorship: Urbanomic (UK)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+ <tr>
+                    <td><strong>2022</strong></td>
+                    <td>Australia Council for the Arts</td>
+                    <td>Arts Projects for Groups & Individuals: min2.report</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>2022</strong></td>
+                    <td>City of Melbourne</td>
+                    <td>Annual Arts Grants: min2.report</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>2021</strong></td>
+                    <td>ACCA & RMIT non/fictionLab</td>
+                    <td>Writing in the Expanded Field #3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>2020</strong></td>
+                    <td>City of Melbourne</td>
+                    <td>Quick Response Arts Grants: min2.report</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>2019</strong></td>
+                    <td>RMIT</td>
+                    <td>Vice-Chancellor’s List for Academic Excellence</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>2019</strong></td>
+                    <td>RMIT</em></td>
+                    <td>Bachelor of Media and Communications (HONS): Creative Writing</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>2015</strong></td>
+                    <td>Gertrude Contemporary</td>
+                    <td>Emerging Writers’ Program</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>2011</strong></td>
+                    <td>Melbourne University</td>
+                    <td>Bachelor of Arts: Linguistics, Film & Cultural Studies</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>2007</strong></td>
+                    <td>University of Queensland</td>
+                    <td>Cambridge English Language Teaching to Adults (CELTA)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+
